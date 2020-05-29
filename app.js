@@ -15,7 +15,7 @@ const seedDB        = require('./seeds');
 const environment   = process.env.NODE_ENV || "production"; 
 
 //REQUIRING ROUTES
-const commentRoutes     = require("./routes/Comments");
+const commentRoutes     = require("./routes/comments");
 const campgroundRoutes  = require("./routes/campgrounds");
 const indexRoutes       = require("./routes/index");
 
