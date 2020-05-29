@@ -1,6 +1,51 @@
+body{
+    background: #5A3F37;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C7744, #5A3F37);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C7744, #5A3F37); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar{
+    background: #2C7744;
+    border-color:#5A3F37;
+
+}
+a.navbar-text, a.navbar-brand, .nav a {
+    color:#1fff66 !important;
+}
+a.navbar-text:hover, a.navbar-brand:hover, .nav a:hover {
+    color:#ccffdc !important;
+}
+
+
 .thumbnail img {
     width: 100%
 }
 .thumbnail {
     padding:0;
+    background: #5A3F37;
+    color: white;
+}
+.commenttext, .timeposted{
+    color:#ccffdc;
+}
+.userinfo{
+    color:#1fff66;
+}
+
+.caption h4, .caption p, h1{
+    color: white;
+}
+.row h3{
+    color:white;
+}
+.well{
+    background-color: #2C7744;
+}
+hr {
+    border-color: #5A3F37;
+}
+.jumbotron{
+    background-color: #5A3F37;
+    color:#1fff66;
+    border: 2px solid gray;
 }
