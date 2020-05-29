@@ -9,7 +9,7 @@ body{
     border-color:#5A3F37;
 
 }
-a.navbar-text, a.navbar-brand, .nav a {
+.navbar-text, a.navbar-brand, .nav a {
     color:#1fff66 !important;
 }
 a.navbar-text:hover, a.navbar-brand:hover, .nav a:hover {
