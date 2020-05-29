@@ -27,7 +27,7 @@ router.post("/", middleware.isLoggedIn, async (req,res) => {
         comment.save();
         camp.comments.push(comment);
         await camp.save();
-        console.log(comment);
+        //console.log(comment);
         req.flash("success","Comment Updated");
         res.redirect(`/campgrounds/${camp._id}`);
     }

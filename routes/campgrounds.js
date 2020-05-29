@@ -18,7 +18,7 @@ router.get("/", async (req,res)=>{
         flash.error("Database Not Ready - Please Try Again");
         res.redirect("/");
     }
-    console.log("GET Campgrounds");
+    //console.log("GET Campgrounds");
 });
 
 router.post("/", middleware.isLoggedIn, async (req,res) =>{
@@ -33,7 +33,7 @@ router.post("/", middleware.isLoggedIn, async (req,res) =>{
         };
         const newCamp = {name: name, price: price, image: image, description: desc, author: author};
         let camp = await Campground.create(newCamp);
-        console.log(`/campgrounds POST added ${camp.name}`);
+        //console.log(`/campgrounds POST added ${camp.name}`);
         req.flash("success", `Campground ${camp.name} Added.  Thank you.`);
         res.redirect("/campgrounds");
     }
@@ -59,7 +59,7 @@ router.get("/:id", async (req,res) => {
             throw "Cannot find this campground ID to display";
         }
         res.render("campgrounds/show",{camp:camp});
-        console.log(`GET /campgrounds/${id} of ${camp.name}`);    
+        //console.log(`GET /campgrounds/${id} of ${camp.name}`);    
     }
     catch (err){
         console.log(`GET /campgrounds/${req.params.id} failed`);
@@ -101,7 +101,7 @@ router.delete("/:id", middleware.checkCampgroundOwnership, async (req,res) => {
         let camp = await Campground.findById(req.params.id);
         for(const comment of camp.comments){
             //no need to await result
-            console.log(comment);
+            //console.log(comment);
             await Comment.findByIdAndRemove(comment._id);
         }
         await Campground.findByIdAndRemove(req.params.id);
