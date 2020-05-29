@@ -7,15 +7,14 @@ body{
 .navbar{
     background: #2C7744;
     border-color:#5A3F37;
-
 }
 .navbar-text, a.navbar-brand, .nav a {
     color:#1fff66 !important;
+    text-shadow: 1px 1px 2px black;
 }
 a.navbar-text:hover, a.navbar-brand:hover, .nav a:hover {
     color:#ccffdc !important;
 }
-
 
 .thumbnail img {
     width: 100%
@@ -48,4 +47,11 @@ hr {
     background-color: #5A3F37;
     color:#1fff66;
     border: 2px solid gray;
+    
+}
+.jumbotron h1{
+    text-shadow: 1px 1px 2px black;
+}
+h4 {
+    text-shadow: 1px 1px 2px black;
 }
