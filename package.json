@@ -9,6 +9,9 @@
   },
   "author": "Ben Holt",
   "license": "MIT",
+  "engines": {
+    "node": "14.3.x"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
