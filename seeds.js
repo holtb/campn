@@ -5,6 +5,7 @@ const User = require("./models/user");
 
 const beanerPassword = "asdf";
 const beanerUsername = "beaner";
+const beanerEmail = "campn-test@holtmail.org";
 
 var seeds = [
     {
@@ -47,7 +48,7 @@ async function seedDB(){
         console.log('Comments deleted');
         await User.deleteOne({username:beanerUsername});
         console.log(`User ${beanerUsername} deleted`)
-        let beanerUser = await User.register(new User({username: beanerUsername}), beanerPassword);
+        let beanerUser = await User.register(new User({email: beanerEmail,username: beanerUsername}), beanerPassword);
         seeds[2].author.id = beanerUser._id;
         seeds[2].author.username = beanerUser.username;
         console.log(`User ${beanerUsername} registered`);

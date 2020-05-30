@@ -19,7 +19,7 @@ router.get("/register", (req,res) =>{
 
 router.post("/register", async (req,res) =>{
     try{
-        var newUser = new User({username: req.body.username});
+        var newUser = new User({email: req.body.email, username: req.body.username});
         await User.register(newUser, req.body.password);
         passport.authenticate("local")(req,res, () => {
             req.flash("success", `Successfully Signed Up. Welcome to CampN, ${newUser.username}`);
