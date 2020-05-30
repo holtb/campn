@@ -52,6 +52,9 @@ hr {
 .jumbotron h1{
     text-shadow: 1px 1px 2px black;
 }
-h4 {
+h4, legend, label {
     text-shadow: 1px 1px 2px black;
+}
+legend, label{
+    color: white;
 }
