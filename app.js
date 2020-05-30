@@ -11,6 +11,7 @@ const Campground    = require('./models/campground');
 const Comment       = require('./models/comment');
 const User          = require("./models/user");
 const seedDB        = require('./seeds');
+const sslexpress    = require('ssl-express-www');
 //assume production unless otherwise told differently, used in seeding DB decision
 const environment   = process.env.NODE_ENV || "production"; 
 
@@ -36,6 +37,7 @@ app.use(express.static(__dirname+"/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
 mongoose.set('useFindAndModify', false);
+app.use(sslexpress);
 
 //RESET DB if in development mode
 if(environment.toLowerCase() == 'development'){
