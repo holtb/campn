@@ -11,5 +11,3 @@ You will need to set up a few environment variables for this to work:
 - AUTHSECRET - This is the secret for express session
 - CAMPEMAILUSER - Username for a Gmail account (password resets)
 - CAMPMAILPWD - Password for the Gmail account (password resets)
-
-See this in action at https://campn.herokuapp.com
