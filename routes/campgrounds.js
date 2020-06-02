@@ -25,7 +25,7 @@ router.get("/", async (req, res) => {
   //console.log("GET Campgrounds");
 });
 
-router.post("/", middleware.isLoggedIn, async (req, res) => {
+router.post("/", middleware.isLoggedInAndVerfied, async (req, res) => {
   try {
     const name = req.body.name;
     const price = req.body.price;
@@ -55,7 +55,7 @@ router.post("/", middleware.isLoggedIn, async (req, res) => {
 });
 
 //This must be declared first!
-router.get("/new", middleware.isLoggedIn, (req, res) => {
+router.get("/new", middleware.isLoggedInAndVerfied, (req, res) => {
   res.render("campgrounds/new");
 });
 

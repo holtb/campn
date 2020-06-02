@@ -1,0 +1,24 @@
+<%- include("./partials/header") %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form action="/verify" method="POST">
+        <legend>Re-Send Account Verification Email</legend>
+        <div class="form-group">
+          <label for="email">Please Confirm or Edit Your Email</label>
+          <input
+            type="email"
+            name="email"
+            value="<%= user.email %>"
+            autofocus
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btn btn-primary" value="Resend Email" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include("./partials/footer") %>
