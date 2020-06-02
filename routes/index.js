@@ -112,7 +112,7 @@ router.get("/verify/:token", async (req, res) => {
   user.verifyToken = undefined;
   user.verifyExpires = undefined;
   user.lastVerifyTime = undefined;
-  user.save();
+  await user.save();
   if (!req.isAuthenticated()) {
     req.flash(
       "success",
