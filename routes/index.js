@@ -291,7 +291,7 @@ async function sendVerifyEmail(req, res, user) {
   //let user = await User.findOne({ email: req.body.email });
   if (!user) {
     req.flash("error", "No account with that email address exists.");
-    res.redirect("/verify");
+    res.redirect("/campgrounds");
     return false;
   }
   if (!user.verifyExpires) {
@@ -303,7 +303,7 @@ async function sendVerifyEmail(req, res, user) {
     user.verifyToken = undefined;
     user.lastVerifyTime = undefined;
     await user.save();
-    res.redirect("/verify");
+    res.redirect("/campgrounds");
     return false;
   }
   if (Date.now() - user.lastVerifyTime < fiveMinutes) {
