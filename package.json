@@ -5,7 +5,10 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "storeit": "git push origin master",
+    "sendprod": "git push heroku master"
   },
   "author": "Ben Holt",
   "license": "MIT",
