@@ -99,11 +99,14 @@ router.get("/verify/:token", async (req, res) => {
     verifyToken: req.params.token,
     verifyExpires: { $gt: Date.now() },
   });
+  console.log("User: " + user);
   if (!user) {
+    console.log("User Fail: " + user);
     req.flash("error", "Verify email token is invalid or expired");
     res.redirect("/campgrounds");
     return;
   }
+  console.log("Verify, after IF");
   //set the verify information for a verified user
   user.emailVerified = true;
   user.verifyToken = undefined;
@@ -118,6 +121,7 @@ router.get("/verify/:token", async (req, res) => {
   } else {
     req.flash("success", "Email verified. Thank you!");
   }
+  console.log("Verify Success Before Redirect");
   res.redirect("/campgrounds");
 });
 
